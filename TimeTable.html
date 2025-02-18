@@ -5,130 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timetable</title>
     <style>
-        /* Background Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             margin: 0;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
         }
-
-        /* Logo Styling */
-        .logo-container {
+        
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             margin-bottom: 20px;
         }
         
-        .logo-container img {
-            width: 120px; /* Adjust size as needed */
-            height: auto;
-            display: block;
+        h1 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
-
-        /* Timetable Styling */
+        
         table {
-            width: 90%;
+            width: 100%;
             border-collapse: collapse;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(8px);
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
         }
-
+        
         th, td {
             border: 1px solid rgba(0, 0, 0, 0.2);
-            padding: 12px;
+            padding: 15px;
+            text-align: center;
         }
-
+        
         th {
-            background: #28a745;
+            background: #ff5e62;
             color: white;
             font-size: 16px;
         }
-
+        
         .lab {
-            background: #5cb85c;
+            background: #ff9966;
             color: white;
+            font-weight: bold;
         }
-
+        
         .lunch {
             background: #ffd700;
             font-weight: bold;
         }
         
-        tr:first-child th {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+        tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.05);
         }
     </style>
 </head>
 <body>
-
-    <!-- Logo Section -->
-    <div class="logo-container">
-        <img src="https://www.nitw.ac.in/images/NITW_logo_telugu3.png" alt="College Logo">
+    <div class="logo">
+        <img src="https://www.nitw.ac.in/images/NITW_logo_telugu3.png">
     </div>
-
-    <table>
-        <tr>
-            <th rowspan="2">Day</th>
-            <th colspan="9">CSE-AI&DS Timetable</th>
-        </tr>
-        <tr>
-            <th>9:00-9:55</th>
-            <th>10:00-10:55</th>
-            <th>11:05-12:00</th>
-            <th>12:05-13:00</th>
-            <th>13:00-13:55</th>
-            <th>14:00-14:55</th>
-            <th>15:05-16:00</th>
-            <th>16:05-17:00</th>
-            <th>17:05-18:00</th>
-        </tr>
-        <tr>
-            <td>Monday</td>
-            <td>DSA</td>
-            <td>Optimization Techniques</td>
-            <td>Discrete Mathematics</td>
-            <td>BEEE</td>
-            <td class="lunch" colspan="1">Lunch Break</td>
-        </tr>
-        <tr>
-            <td>Tuesday</td>
-            <td colspan="2"></td>
-            <td>Optimization Techniques</td>
-            <td>Discrete Mathematics</td>
-            <td class="lunch" colspan="1">Lunch Break</td>
-            <td>Calculus</td>
-        </tr>
-        <tr>
-            <td>Wednesday</td>
-            <td class="lab" rowspan="3" colspan="3">DS Lab</td>
-            <td class="lunch">Lunch Break</td>
-            <td>Optimization Techniques</td>
-            <td>DT</td>
-            <td colspan="3">DT</td>
-        </tr>
-        <tr>
-            <td>Thursday</td>
-            <td class="lunch">Lunch Break</td>
-            <td>BEEE</td>
-            <td colspan="4"></td>
-        </tr>
-        <tr>
-            <td>Friday</td>
-            <td>Calculus</td>
-            <td class="lab">Calculus Tutorial</td>
-            <td>BEEE</td>
-            <td class="lunch">Lunch Break</td>
-            <td>Discrete Mathematics</td>
-            <td class="lab" colspan="3">WP Lab</td>
-        </tr>
-    </table>
+    <div class="container">
+        <h1>CSE AI & DS Timetable</h1>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>9:00-9:55</th>
+                <th>10:00-10:55</th>
+                <th>11:05-12:00</th>
+                <th>12:05-13:00</th>
+                <th>13:00-13:55</th>
+                <th>14:00-14:55</th>
+                <th>15:05-16:00</th>
+                <th>16:05-17:00</th>
+                <th>17:05-18:00</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>DSA</td>
+                <td>Optimization Techniques</td>
+                <td>Discrete Mathematics</td>
+                <td>BEEE</td>
+                <td class="lunch">Lunch</td>
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td colspan="2"></td>
+                <td>Optimization Techniques</td>
+                <td>Discrete Mathematics</td>
+                <td class="lunch">Lunch</td>
+                <td>Calculus</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td class="lab" colspan="3">DS Lab</td>
+                <td class="lunch">Lunch</td>
+                <td>Optimization Techniques</td>
+                <td>DT</td>
+                <td colspan="3">DT</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td class="lab" colspan="3">BEEE Lab</td>
+                <td class="lunch">Lunch</td>
+                <td>BEEE</td>
+                <td colspan="4"></td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>Calculus</td>
+                <td class="lab">Calculus Tutorial</td>
+                <td>BEEE</td>
+                <td class="lunch">Lunch</td>
+                <td>Discrete Mathematics</td>
+                <td class="lab" colspan="3">WP Lab</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="container">
+        <h1>Course Instructors</h1>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Instructor</th>
+            </tr>
+            <tr>
+                <td>Basics of Electronics and Electrical Engineering</td>
+                <td>Dr. Debasmita Panda</td>
+            </tr>
+            <tr>
+                <td>Data Structures and Algorithms</td>
+                <td>Dr. Venkateshwara Rao Kagita</td>
+            </tr>
+            <tr>
+                <td>Discrete Mathematics</td>
+                <td>Dr. Ramalingaswamy Cheruku</td>
+            </tr>
+            <tr>
+                <td>Optimisation Techniques</td>
+                <td>Dr. Sujit Das</td>
+            </tr>
+            <tr>
+                <td>Calculus</td>
+                <td>Deepika Neela</td>
+            </tr>
+            <tr>
+                <td>Web Programming Lab</td>
+                <td>Dr. Koyya Deepthi Krishna Yadav</td>
+            </tr>
+            <tr>
+                <td>Design Thinking</td>
+                <td>Dr. Manoj Kumar Bajpai</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
