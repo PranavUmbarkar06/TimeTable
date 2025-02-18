@@ -5,44 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timetable</title>
     <style>
+        /* Background Styling */
         body {
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            margin: 0;
         }
+
+        /* Timetable Styling */
         table {
             width: 90%;
             border-collapse: collapse;
             text-align: center;
-            background-color: white;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
         }
+
         th, td {
-            border: 1px solid black;
-            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 12px;
         }
+
         th {
-            background-color: #28a745;
+            background: #28a745;
             color: white;
+            font-size: 16px;
         }
+
         .lab {
-            background-color: #5cb85c;
+            background: #5cb85c;
             color: white;
         }
+
         .lunch {
-            background-color: #ffd700;
-        }
-        td {
+            background: #ffd700;
             font-weight: bold;
+        }
+        
+        tr:first-child th {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
     </style>
 </head>
 <body>
     <table>
         <tr>
-            <th>CSE-AI&DS</th>
+            <th rowspan="2">Day</th>
+            <th colspan="9">CSE-AI&DS Timetable</th>
+        </tr>
+        <tr>
             <th>9:00-9:55</th>
             <th>10:00-10:55</th>
             <th>11:05-12:00</th>
@@ -59,47 +78,29 @@
             <td>Optimization Techniques</td>
             <td>Discrete Mathematics</td>
             <td>BEEE</td>
-            <td class="lunch">Lunch Break</td>
-            <td></td>
-            <td>Calculus</td>
-            <td></td>
-            <td></td>
+            <td class="lunch" colspan="5">Lunch Break</td>
         </tr>
         <tr>
             <td>Tuesday</td>
-            <td></td>
-            <td></td>
+            <td colspan="2"></td>
             <td>Optimization Techniques</td>
             <td>Discrete Mathematics</td>
-            <td class="lunch">Lunch Break</td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td class="lunch" colspan="4">Lunch Break</td>
             <td>Calculus</td>
         </tr>
         <tr>
             <td>Wednesday</td>
-            <td class="lab">DS Lab</td>
-            <td class="lab">DS Lab</td>
-            <td class="lab">DS Lab</td>
+            <td class="lab" rowspan="3" colspan="3">DS Lab</td>
             <td class="lunch">Lunch Break</td>
             <td>Optimization Techniques</td>
             <td>DT</td>
-            <td>DT</td>
-            <td>DT</td>
-            <td>DT</td>
+            <td colspan="3">DT</td>
         </tr>
         <tr>
             <td>Thursday</td>
-            <td class="lab">DSA</td>
-            <td>DSA</td>
-            <td></td>
             <td class="lunch">Lunch Break</td>
             <td>BEEE</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td colspan="4"></td>
         </tr>
         <tr>
             <td>Friday</td>
@@ -108,10 +109,7 @@
             <td>BEEE</td>
             <td class="lunch">Lunch Break</td>
             <td>Discrete Mathematics</td>
-            <td class="lab">WP Lab</td>
-            <td class="lab">WP Lab</td>
-            <td class="lab">WP Lab</td>
-            <td></td>
+            <td class="lab" colspan="3">WP Lab</td>
         </tr>
     </table>
 </body>
