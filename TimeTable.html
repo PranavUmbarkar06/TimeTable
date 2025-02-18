@@ -9,11 +9,23 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background: linear-gradient(135deg, #74ebd5, #acb6e5);
             margin: 0;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        
+        .logo-container img {
+            width: 120px; /* Adjust size as needed */
+            height: auto;
+            display: block;
         }
 
         /* Timetable Styling */
@@ -56,6 +68,12 @@
     </style>
 </head>
 <body>
+
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="logo.png" alt="College Logo">
+    </div>
+
     <table>
         <tr>
             <th rowspan="2">Day</th>
@@ -78,14 +96,14 @@
             <td>Optimization Techniques</td>
             <td>Discrete Mathematics</td>
             <td>BEEE</td>
-            <td class="lunch" colspan="5">Lunch Break</td>
+            <td class="lunch" colspan="1">Lunch Break</td>
         </tr>
         <tr>
             <td>Tuesday</td>
             <td colspan="2"></td>
             <td>Optimization Techniques</td>
             <td>Discrete Mathematics</td>
-            <td class="lunch" colspan="4">Lunch Break</td>
+            <td class="lunch" colspan="1">Lunch Break</td>
             <td>Calculus</td>
         </tr>
         <tr>
